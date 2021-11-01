@@ -23,8 +23,6 @@
 
 //CODE HERE
 
-
-
 let greetUser = USERNAME => `Welcome back, ${USERNAME}`
 console.log(greetUser('Andrew'))
 
@@ -48,19 +46,38 @@ console.log(greetUser('Andrew'))
     canWeDeliver(85205) 
         // `You're in our delivery zone!`
 */
-
 const deliveryAreaZipCodes = [85205, 85204, 85203, 85213, 85206]
 
 //CODE HERE
-const canWeDeliver = (arr, num1, cb) => cb()
-
-canWeDeliver(deliveryAreaZipCodes, 48103, result => {
-if(48103 === true){
-    console.log("You're in our delivery zone!")
-} else {
-    console.log("Sorry, we can't deliver to that address")
+const canWeDeliver = (zip) => {
+    console.log(zip)
+    let inList = deliveryAreaZipCodes.includes(zip)
+        console.log(inList)
+       
+        // Alternative is to use ? and : for shorter code
+        // inList ?
+        // console.log("You're in our delivery zone!")
+        // : console.log("Sorry, we can't deliver to that address")
+       
+        if(inList) {
+            console.log("You're in our delivery zone!")}
+        else {
+            ("Sorry, we can't deliver to that address")
+        }
+        
 }
-})
+canWeDeliver(85205)
+
+// const canWeDeliver = (arr, num1, cb) => cb()
+
+// canWeDeliver(deliveryAreaZipCodes, 48103, result => {
+// if(48103 === true){
+//     console.log("You're in our delivery zone!")
+// } else {
+//     console.log("Sorry, we can't deliver to that address")
+// }
+// })
+
 
 
 
@@ -118,9 +135,15 @@ const deals = [
 */
 
 //CODE HERE
-const changeToTen = deals.replace(15, 10)
+//console.log(deals)
+//alternative version of line 140: console.log(deals[0]['title'])
+//console.log(deals[0].title)
+
+const firstTitle = deals[0].title
+const changeToTen = firstTitle.replace('15', '10');
 console.log(changeToTen)
 
+//console.log(firstTitle)
 
 /*
     The restaurant is going to continue its
@@ -136,9 +159,11 @@ console.log(changeToTen)
 */
 
 //CODE HERE
+const secondDes = deals[1].desc
+const changeToApril = secondDes.replace('March', 'April');
+console.log(changeToApril)
+// deals.trim()
+// console.log(deals)
 
-deals.trim()
-console.log(deals)
-
-const changeMonth = deals.replace('March', 'April')
-console.log(changeMonth)
+// const changeMonth = deals.replace('March', 'April')
+// console.log(changeMonth)

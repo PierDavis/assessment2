@@ -97,8 +97,50 @@ console.log(`${category}`)
 */
 
 //CODE HERE
+let foodArr = [
+    {
+        name: 'chimkim wings', 
+        price: 8,
+        category: 'apps',
+        popularity: 90,
+        rating: 4, 
+        tags: ['kids, bbq, vegetarian'],
+    },
 
-let foodArr = ['chimkim wings', 8, 'apps', 90, 4, ['kids, bbq, vegetarian']]
+    {
+        name: 'home fries with egg',
+        price: 9,
+        category: 'brekkie',
+        popularity: 100,
+        rating: 4.9,
+        tags: ['yummiest', 'soft-boiled egg', 'taters'],
+    },
+
+    {   name: 'sweet potato fries',
+        price: 7,
+        category: 'apps',
+        popularity: 99,
+        rating: 5,
+        tags: ['chiptole aioli', 'not for Alex', 'gluten-free'],
+    },
+
+    {   name: 'curry',
+        price: 13,
+        category: 'mains',
+        popularity: 97,
+        rating: 4.3,
+        tags: ['spicy', 'vegetarian', 'gluten-free'],  
+    },
+    
+    {
+        name: 'chocolate ice cream sandwich',
+        price: 5,
+        category: 'desserts',
+        popularity: 100,
+        rating: 5,
+        tags: ['gluten-free', 'kids', 'best ever', 'adults'],
+    }]
+
 
 //////////////////PROBLEM 4////////////////////
 /* 
@@ -111,17 +153,30 @@ let foodArr = ['chimkim wings', 8, 'apps', 90, 4, ['kids, bbq, vegetarian']]
     You can check for any tag that at least 1 of
     your food objects has.
 */
+//stuart:
+//function(tagString){
+    //const tagFilter = foodArr.filter(el =>) {
+// function filtermyFood(tagString){   
+//     return foodArr.filter(el=> {
+//         return el.tags.includes(tagString)
+//     })
+// }
+// const filteredTagArr = filterMyFood('bbq')
+// console.log(filteredTagArr)
 
-//CODE HERE
-foodArr.forEach(function(index){
-    console.log(`${index}`)
-})
-const filteredArr = foodArr.filter(element => element === 'kids')
+// //CODE HERE
+// foodArr.forEach(function(index){
+//     console.log(`${index}`)
+// })
+
+
+// popularity example: const filteredArr = foodArr.filter(menuItem => menuItem.popularity > 90)
+const filteredArr = foodArr.filter(menuItem => menuItem.tags.includes('gluten-free'))
 console.log(filteredArr)
 
-// console.log(foodArr.)
+//console.log(filteredArr)
 
-// const filteredFood = foodArr.filter(/* CALLBACK HERE */)
+//const filteredFood = foodArr.filter(/* CALLBACK HERE */)
 
 
 //////////////////PROBLEM 5////////////////////
@@ -164,7 +219,16 @@ console.log(filteredArr)
 */
 
 //CODE HERE
-const filterByProperty = ('prop', num1, type) 
+// function filterByProperty (prop, number, type) {
+//     const ourFilteredArr = foodArr.filter(el) => {
+//         if(type ==='above'){
+//             return number < el[prop]
+//         } else {
+//             return number > el[prop]
+//         }
+//     })
+//     return ourFilteredArr
+// }
 
 /*
     Invoke the `filterByProperty` function passing
@@ -174,3 +238,5 @@ const filterByProperty = ('prop', num1, type)
 */
 
 //CODE HERE
+// const answer = filterByProperty('price', 8, 'above')
+// console.log(answer)
