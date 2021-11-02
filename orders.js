@@ -31,13 +31,17 @@
 //CODE HERE
 class Ticket {
     constructor(items, orderTime, customerId){
-        these.items = items;
+        this.items = items;
         this.orderTime = time;
         this.customerId = customerId;
+        this.status = 'queued';
+    }
+    updateStatus(newStatus){
+        console.log('The order for customer [CUSTOMERID] is now [STATUS]');
     }
 }
-class.updateStatus('newStatus')
-
+   const newStatus = updateStatus('hamburger','10 mins')
+    console.log(newStatus)
 
 /*
     Create a new instance of your class.

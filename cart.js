@@ -7,7 +7,6 @@
     creating customer objects.  
 */
 
-
 //////////////////PROBLEM 1////////////////////
 /*  
     Below is a cart array that has food objects
@@ -34,11 +33,29 @@ const cart = [
 ]
 
 //CODE HERE
+const priceArr = cart.map(item => item.price) //an easy way to make an array out of an object, using map and pulling out individual items within object array using a descriptor word (item) then arrow function and variable.target item(price in this case)
+console.log(priceArr)
 
-const summedPrice = cart.reduce(function(acc, curr) {
-    return acc + curr
-})
-console.log(summedPrice)
+const reducer = (previousValue, currentValue) => previousValue + currentValue;
+
+console.log(priceArr.reduce(reducer)); //this can be used to find sums in future object arrays
+
+
+// const sum = (cartSum) => cartSum.reduce((a, b) => a.price + b.price, 0);
+//     const summedPrice = sum(cart)
+
+//     console.log(summedPrice)
+
+// console.log(cart.price.reduce(reducer));
+
+// const arrSum = (arr) => arr.reduce((a, b) => a + b, 0);
+// arrSum(buildARRarray)
+
+// const summedPrice = cart.reduce(function(acc, curr) {
+//     return acc + curr
+// })
+// console.log(summedPrice)
+
 
 
 //////////////////PROBLEM 2////////////////////
@@ -59,8 +76,10 @@ console.log(summedPrice)
 //CODE HERE
 
 const calcFinalPrice = function(cartTotal, couponValue, tax) {
-    
-}
+    return (cartTotal - couponValue) * (tax + 1) 
+};
+const finalPrice = calcFinalPrice(10, 2, .05)
+console.log(finalPrice)
 
 //////////////////PROBLEM 3////////////////////
 /*  
