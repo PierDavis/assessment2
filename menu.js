@@ -178,7 +178,6 @@ console.log(filteredArr)
 
 //const filteredFood = foodArr.filter(/* CALLBACK HERE */)
 
-
 //////////////////PROBLEM 5////////////////////
 /* 
     Now let's write a function that's a little
@@ -219,16 +218,16 @@ console.log(filteredArr)
 */
 
 //CODE HERE
-// function filterByProperty (prop, number, type) {
-//     const ourFilteredArr = foodArr.filter(el) => {
-//         if(type ==='above'){
-//             return number < el[prop]
-//         } else {
-//             return number > el[prop]
-//         }
-//     })
-//     return ourFilteredArr
-// }
+function filterByProperty (prop, num, type) {
+    const ourFilteredArr = foodArr.filter(el) => {
+        if(type ==='above'){
+            return num < el[prop]
+        } else {
+            return num > el[prop]
+        }
+    })
+    return ourFilteredArr
+}
 
 /*
     Invoke the `filterByProperty` function passing
@@ -238,5 +237,5 @@ console.log(filteredArr)
 */
 
 //CODE HERE
-// const answer = filterByProperty('price', 8, 'above')
-// console.log(answer)
+const answer = filterByProperty('price', 8, 'above')
+console.log(answer)

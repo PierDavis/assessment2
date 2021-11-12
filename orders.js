@@ -40,7 +40,7 @@ class Ticket {
         console.log('The order for customer [CUSTOMERID] is now [STATUS]');
     }
 }
-   const newStatus = updateStatus('hamburger','10 mins')
+   const newStatus = updateStatus('sweet potato fries','10 mins')
     console.log(newStatus)
 
 /*
